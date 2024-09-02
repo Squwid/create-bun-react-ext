@@ -13,5 +13,9 @@
 
 ## Commands
 
+```sh
+bun create Squwid/create-bun-react-ext my-extension
+```
+
 - `bun run bundle`: Bundles the extension to the `dist/` directory.
 - `bun run format`: Format the document.
