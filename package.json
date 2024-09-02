@@ -1,24 +1,30 @@
 {
-  "name": "create-bun-react-app",
+  "name": "create-bun-react-ext",
   "type": "module",
   "devDependencies": {
+    "@types/chrome": "^0.0.246",
+    "@types/imagemagick": "^0.0.33",
     "@types/bun": "latest",
     "@types/react": "latest",
-    "@types/react-dom": "latest"
+    "@types/react-dom": "latest",
+    "bun-types": "latest",
+    "imagemagick": "^0.1.3",
+    "prettier": "^3.0.3"
   },
   "peerDependencies": {
-    "typescript": "latest"
+    "typescript": "^5.0.0"
   },
   "dependencies": {
+    "fs-extra": "^11.2.0",
     "react": "latest",
     "react-dom": "latest",
     "tailwind": "latest"
   },
   "scripts": {
-    "dev": "bun ./scripts/helper.ts -b -w -s",
-    "bundle": "NODE_ENV=production bun ./scripts/helper.ts -b",
-    "start": "bun ./scripts/helper.ts -s",
-    "lint": "echo 'Add your lint command by editing the package.json file' && exit 1"
+    "dev": "bun ./build-tools/helper.ts -b -w -s",
+    "build": "NODE_ENV=production bun ./build-tools/helper.ts -b",
+    "bundle": "bun run build build && cd build-tools && bun bundler.ts",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md}' '!build/**' '!node_modules/**'"
   },
   "engines": {
     "bun": ">=1.0.27"

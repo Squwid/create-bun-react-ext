@@ -1,18 +1,28 @@
 {
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
-    "lib": ["ESNext", "DOM"],
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleDetection": "force",
+    "types": [
+      "bun-types", // add Bun type definitions
+      "./types.d.ts", // add your own type definitions
+      "@types/chrome"
+    ],
+
+    // enable latest features
+    "lib": ["esnext"],
+    "module": "esnext",
+    "target": "esnext",
+
     "jsx": "react-jsx",
     "allowJs": true,
 
-    /* Bundler mode */
+    // if TS 5.x+
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
     "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    "verbatimModuleSyntax": true,
+    // if TS 4.x or earlier
+    // "moduleResolution": "nodenext",
 
     /* Linting */
     "strict": true,

@@ -13,6 +13,7 @@
 </div>
 
 ## Get started
+
 ```shell
 bun create gerardmarquinarubio/create-bun-react-app myapp
 cd myapp
@@ -25,24 +26,27 @@ bun dev
 
 ## Features
 
-| **Feature**         | **Description**                       |
-|---------------------|---------------------------------------|
-| dependencies        | `react`, `react-dom`, `tailwindcss`   |
-| bundle              | `bun bundle`                          |
-| dev (hot reload)    | `bun dev`                             |
-| serve               | `bun start`                           |
-| dist bundle size    | `16kb` (dist production)              |
-| repo size           | `37kb` (src + conf + scripts)         |
+| **Feature**      | **Description**                     |
+| ---------------- | ----------------------------------- |
+| dependencies     | `react`, `react-dom`, `tailwindcss` |
+| bundle           | `bun bundle`                        |
+| dev (hot reload) | `bun dev`                           |
+| serve            | `bun start`                         |
+| dist bundle size | `16kb` (dist production)            |
+| repo size        | `37kb` (src + conf + scripts)       |
 
 ## Motivation
+
 Meta-frameworks are overkill for simple client-side-only react apps. Bundlers like `webpack`are too complicated and cumbersome, others like `esbuild` or `rollup` while much easier to use still require you to know the inner workings of bundling, module types, transpilation, loaders, etc. This template aims to solve that by simplifying the process.
 
 This template has 4 dependencies:
+
 - `react` and `react-dom` to develop and render your react app in the client
 - `tailwindcss` for styling your app using convenient classnames
 - `bun` to run your code and bundle it to the web
 
 This template won't include:
+
 - linters/formatters like `eslint`
 - state managment `redux` or `react-query`
 - route managment like `react-router`
